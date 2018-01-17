@@ -1,0 +1,100 @@
+﻿<Page
+    x:Class="SwiatMrokuPC.NowaKarta"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SwiatMrokuPC"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button" x:Key="StylGowny">
+                <Setter Property="FontSize"
+                                Value="30"/>
+                <Setter Property="FontStyle"
+                            Value="Normal"/>
+                <Setter Property="Foreground"
+                        Value="Black"/>
+                <Setter Property="Width"
+                        Value="300"/>
+                <Setter Property="Height"
+                        Value="50"/>
+            </Style>
+            <Style x:Key="TextBoxStyle1" TargetType="TextBox">
+                <Setter Property="BorderBrush"
+                        Value="Black"/>
+                <Setter Property="Background" 
+                        Value="Yellow"/>
+                <Setter Property="HorizontalAlignment"
+                        Value="Left"/>
+                <Setter Property="VerticalAlignment"
+                        Value="Top"/>
+                <Setter Property="MaxHeight"
+                        Value="1"/>
+                <Setter Property="Width"
+                        Value="150"/>
+                <Setter Property="MaxLength"
+                        Value="50"/>
+                
+
+            </Style>
+
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key ="Dark">
+                    <Style BasedOn="{StaticResource StylGowny}"
+                           TargetType="Button">
+                        <Setter Property="Foreground"
+                                Value="DarkGreen"/>
+                    </Style>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key ="Light">
+                    <Style BasedOn="{StaticResource StylGowny}"
+                           TargetType="Button">
+                        <Setter Property="Foreground"
+                                Value="DeepSkyBlue"/>
+                    </Style>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Border BorderBrush="Black" 
+                BorderThickness="3" 
+                HorizontalAlignment="Left" 
+                Height="370" 
+                VerticalAlignment="Top" 
+                Width="170" 
+                Margin="10,10,0,0">
+           
+           
+        </Border>
+        <TextBox     PlaceholderText="Imie"
+                     Style="{StaticResource TextBoxStyle1}"
+                        Margin="20,20,0,0" />
+        <TextBox     PlaceholderText="Wiek"
+                     Style="{StaticResource TextBoxStyle1}"
+                        Margin="20,60,0,0" />
+        <TextBox     PlaceholderText="Gracz"
+                     Style="{StaticResource TextBoxStyle1}"
+                        Margin="20,100,0,0" />
+        <TextBox     PlaceholderText="Koncept"
+                     Style="{StaticResource TextBoxStyle1}"
+                        Margin="20,140,0,0" />
+        <TextBox     PlaceholderText="Cnota"
+                     Style="{StaticResource TextBoxStyle1}"
+                        Margin="20,180,0,0" />
+        <TextBox     PlaceholderText="Skaza"
+                     Style="{StaticResource TextBoxStyle1}"
+                        Margin="20,220,0,0" />
+        <TextBox     PlaceholderText="Kronika"
+                     Style="{StaticResource TextBoxStyle1}"
+                        Margin="20,260,0,0" />
+        <TextBox     PlaceholderText="Frakcja"
+                     Style="{StaticResource TextBoxStyle1}"
+                        Margin="20,300,0,0" />
+        <TextBox     PlaceholderText="Nazwa Grupy"
+                     Style="{StaticResource TextBoxStyle1}"
+                        Margin="20,340,0,0" />
+    </Grid>
+</Page>
