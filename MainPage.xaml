@@ -6,8 +6,72 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button" x:Key="StylGowny">
+                <Setter Property="FontSize"
+                                Value="30"/>
+                <Setter Property="FontStyle"
+                            Value="Normal"/>
+                <Setter Property="Foreground"
+                        Value="Black"/>
+                <Setter Property="Width"
+                        Value="300"/>
+                <Setter Property="Height"
+                        Value="50"/>
+            </Style>
+
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key ="Dark">
+                    <Style BasedOn="{StaticResource StylGowny}"
+                           TargetType="Button">
+                        <Setter Property="Foreground"
+                                Value="DarkGreen"/>
+                    </Style>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key ="Light">
+                    <Style BasedOn="{StaticResource StylGowny}"
+                           TargetType="Button">
+                        <Setter Property="Foreground"
+                                Value="DeepSkyBlue"/>
+                    </Style>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <Button Content="Nowa Karta" 
+                Name="NowaKarta"
+                HorizontalAlignment="Center"
+                Margin="0,50,0,0"
+                VerticalAlignment="Top"
+                Style="{StaticResource StylGowny}"/>
+        <Button Content="Wczytaj Karty"
+                Name="WczytajKarte"
+                HorizontalAlignment="Center"
+                Margin="0,120,0,0"
+                VerticalAlignment="Top"
+                Style="{StaticResource StylGowny}"/>
+        <Button Content="Eksportuj"
+                Name="Eksportuj"
+                HorizontalAlignment="Center"
+                Margin="0,190,0,0"
+                VerticalAlignment="Top"
+                Style="{StaticResource StylGowny}"/>
+        <Button Content="Importuj"
+                Name="Importuj"
+                HorizontalAlignment="Center"
+                Margin="0,260,0,0"
+                VerticalAlignment="Top"
+                Style="{StaticResource StylGowny}"/>
+        <Button Content="About" 
+                Name="About"
+                HorizontalAlignment="Center"
+                Margin="0,330,0,0"
+                VerticalAlignment="Top"
+                Style="{StaticResource StylGowny}"/>
 
     </Grid>
 </Page>
