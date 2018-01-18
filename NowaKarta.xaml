@@ -35,8 +35,55 @@
                         Value="150"/>
                 <Setter Property="MaxLength"
                         Value="50"/>
-                
+                <Setter Property="Margin"
+                        Value="5,0,0,0"/>
 
+
+            </Style>
+            <Style x:Key="TextBoxNumeric" TargetType="TextBox">
+                <Setter Property="BorderBrush"
+                                Value="Black"/>
+                <Setter Property="Background"
+                                Value="White"/>
+                <Setter Property="InputScope"
+                                Value="Number"/>
+                <Setter Property="MaxHeight"
+                                Value="1"/>
+                <Setter Property="Width"
+                                Value="1"/>
+                <Setter Property="MaxLength"
+                                Value="1"/>
+                <Setter Property="HorizontalAlignment"
+                        Value="Right"/>
+                <Setter Property="VerticalAlignment"
+                        Value="Top"/>
+                <Setter Property="Margin"
+                        Value="0,0,20,0"/>
+            </Style>
+            <Style x:Key="BorderStyle" TargetType="Border">
+                <Setter Property="BorderBrush"
+                        Value="Black"/>
+                <Setter Property="BorderThickness"
+                        Value="3"/>
+
+            </Style>
+            <Style x:Key="NumeryczneWpisywanie" TargetType="TextBox">
+                <Setter Property="BorderBrush"
+                                Value="Black"/>
+                <Setter Property="Background"
+                                Value="White"/>
+                <Setter Property="InputScope"
+                                Value="Number"/>
+                <Setter Property="MaxHeight"
+                                Value="1"/>
+                <Setter Property="Width"
+                                Value="150"/>
+                <Setter Property="MaxLength"
+                                Value="7"/>
+                <Setter Property="HorizontalAlignment"
+                        Value="Left"/>
+                <Setter Property="VerticalAlignment"
+                        Value="Top"/>
             </Style>
 
             <ResourceDictionary.ThemeDictionaries>
@@ -54,6 +101,15 @@
                                 Value="DeepSkyBlue"/>
                     </Style>
                 </ResourceDictionary>
+                <ResourceDictionary x:Key="BorderStyleHard">
+                    <Style BasedOn="{StaticResource BorderStyle}"
+                           TargetType="Border">
+                        <Setter Property="BorderThickness"
+                                Value="3"/>
+                    </Style>
+                </ResourceDictionary>
+               
+              
             </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>
     </Page.Resources>
@@ -62,39 +118,767 @@
         <Border BorderBrush="Black" 
                 BorderThickness="3" 
                 HorizontalAlignment="Left" 
-                Height="370" 
+                Height="453" 
                 VerticalAlignment="Top" 
                 Width="170" 
-                Margin="10,10,0,0">
-           
-           
+                Margin="10,10,0,0"
+                Style="{StaticResource BorderStyle}">
+            <GridView HorizontalAlignment="Right" Width="164" Margin="0,7,-3,10" >
+
+                <TextBox     PlaceholderText="Imie"
+                     Style="{StaticResource TextBoxStyle1}"
+                        />
+                <TextBox     PlaceholderText="Wiek"
+                     Style="{StaticResource TextBoxStyle1}"
+                        />
+                <TextBox     PlaceholderText="Gracz"
+                     Style="{StaticResource TextBoxStyle1}"
+                         />
+                <TextBox     PlaceholderText="Koncept"
+                     Style="{StaticResource TextBoxStyle1}"
+                       />
+                <TextBox     PlaceholderText="Cnota"
+                     Style="{StaticResource TextBoxStyle1}"
+                        />
+                <TextBox     PlaceholderText="Skaza"
+                     Style="{StaticResource TextBoxStyle1}"
+                        />
+                <TextBox     PlaceholderText="Kronika"
+                     Style="{StaticResource TextBoxStyle1}"
+                        />
+                <TextBox     PlaceholderText="Frakcja"
+                     Style="{StaticResource TextBoxStyle1}"
+                      />
+                <TextBox     PlaceholderText="Nazwa Grupy"
+                     Style="{StaticResource TextBoxStyle1}"
+                        />
+            </GridView>
+
         </Border>
-        <TextBox     PlaceholderText="Imie"
-                     Style="{StaticResource TextBoxStyle1}"
-                        Margin="20,20,0,0" />
-        <TextBox     PlaceholderText="Wiek"
-                     Style="{StaticResource TextBoxStyle1}"
-                        Margin="20,60,0,0" />
-        <TextBox     PlaceholderText="Gracz"
-                     Style="{StaticResource TextBoxStyle1}"
-                        Margin="20,100,0,0" />
-        <TextBox     PlaceholderText="Koncept"
-                     Style="{StaticResource TextBoxStyle1}"
-                        Margin="20,140,0,0" />
-        <TextBox     PlaceholderText="Cnota"
-                     Style="{StaticResource TextBoxStyle1}"
-                        Margin="20,180,0,0" />
-        <TextBox     PlaceholderText="Skaza"
-                     Style="{StaticResource TextBoxStyle1}"
-                        Margin="20,220,0,0" />
-        <TextBox     PlaceholderText="Kronika"
-                     Style="{StaticResource TextBoxStyle1}"
-                        Margin="20,260,0,0" />
-        <TextBox     PlaceholderText="Frakcja"
-                     Style="{StaticResource TextBoxStyle1}"
-                        Margin="20,300,0,0" />
-        <TextBox     PlaceholderText="Nazwa Grupy"
-                     Style="{StaticResource TextBoxStyle1}"
-                        Margin="20,340,0,0" />
+
+        <Border Style="{StaticResource BorderStyle}"
+              HorizontalAlignment="Left"
+                Height="100" 
+                Margin="185,10,0,0" 
+                VerticalAlignment="Top" 
+                Width="687">
+            <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                           Margin="0,5"/>
+                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                        Margin="0,35,0,0"/>
+                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                        Margin="0,65,0,0" />
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="100,0,0,0" 
+                          VerticalAlignment="Top" Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="120,0,0,0" 
+                          VerticalAlignment="Top"
+                         Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="140,0,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="160,0,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="180,0,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="100,30,0,0" 
+                          VerticalAlignment="Top" Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="120,30,0,0" 
+                          VerticalAlignment="Top"
+                         Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="140,30,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="160,30,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="180,30,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="100,60,0,0" 
+                          VerticalAlignment="Top" Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="120,60,0,0" 
+                          VerticalAlignment="Top"
+                         Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="140,60,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="160,60,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="180,60,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+
+                <TextBlock TextWrapping="Wrap" Text="Textlock"
+                           Margin="230,5,0,0"/>
+                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                        Margin="230,35,0,0"/>
+                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                        Margin="230,65,0,0" />
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="330,0,0,0" 
+                          VerticalAlignment="Top" Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="350,0,0,0" 
+                          VerticalAlignment="Top"
+                         Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="370,0,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="390,0,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="410,0,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="330,30,0,0" 
+                          VerticalAlignment="Top" Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="350,30,0,0" 
+                          VerticalAlignment="Top"
+                         Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="370,30,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="390,30,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="410,30,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="330,60,0,0" 
+                          VerticalAlignment="Top" Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="350,60,0,0" 
+                          VerticalAlignment="Top"
+                         Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="370,60,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="390,60,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="410,60,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+
+                <TextBlock TextWrapping="Wrap" Text="Textlock"
+                           Margin="460,5,0,0"/>
+                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                        Margin="460,35,0,0"/>
+                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                        Margin="460,65,0,0" />
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="560,0,0,0" 
+                          VerticalAlignment="Top" Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="580,0,0,0" 
+                          VerticalAlignment="Top"
+                         Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="600,0,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="620,0,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="640,0,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="560,30,0,0" 
+                          VerticalAlignment="Top" Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="580,30,0,0" 
+                          VerticalAlignment="Top"
+                         Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="600,30,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="620,30,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="640,30,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="560,60,0,0" 
+                          VerticalAlignment="Top" Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="580,60,0,0" 
+                          VerticalAlignment="Top"
+                         Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="600,60,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="620,60,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+                <CheckBox 
+                          HorizontalAlignment="Left" 
+                          Margin="640,60,0,0" 
+                          VerticalAlignment="Top"
+                            Width="20"/>
+            </Grid>
+        </Border>
+
+
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="217" Margin="185,115,0,0" VerticalAlignment="Top" Width="675">
+            <Grid>
+                <Border BorderBrush="Black" 
+                BorderThickness="1" 
+                HorizontalAlignment="Left" 
+                Height="215" 
+                Margin="0,0,0,0"
+                VerticalAlignment="Top" 
+                Width="223"
+                Style="{StaticResource BorderStyle}">
+                    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,5,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                         />
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,35,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,32,20,0" />
+
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,65,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,62,20,0"  />
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,95,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,92,20,0" />
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,125,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,122,20,0" />
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,155,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,152,20,0" />
+
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,185,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,182,20,0"/>
+                       
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,92,20,0" />
+
+
+                    </Grid>
+                </Border>
+                <Border BorderBrush="Black" 
+                BorderThickness="1" 
+                HorizontalAlignment="Left" 
+                Height="215" 
+                Margin="225,0,0,0" 
+                VerticalAlignment="Top" 
+                Width="223"
+                Style="{StaticResource BorderStyle}">
+                    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,5,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                         />
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,35,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,32,20,0" />
+
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,65,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,62,20,0"  />
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,95,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,92,20,0" />
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,125,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,122,20,0" />
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,155,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,152,20,0" />
+
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,185,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,182,20,0"/>
+                       
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,92,20,0" />
+
+
+                    </Grid>
+                </Border>
+                <Border BorderBrush="Black" 
+                BorderThickness="1" 
+                HorizontalAlignment="Left" 
+                Height="215" 
+                Margin="450,0,0,0" 
+                VerticalAlignment="Top" 
+                Width="223"
+                Style="{StaticResource BorderStyle}">
+                    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,5,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                         />
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,35,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,32,20,0" />
+
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,65,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,62,20,0"  />
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,95,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,92,20,0" />
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,125,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,122,20,0" />
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,155,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,152,20,0" />
+
+                        <TextBlock Text="Textlock"
+                           TextWrapping="Wrap"
+                           Margin="5,185,0,0"/>
+
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,182,20,0"/>
+                       
+                        <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,92,20,0" />
+
+
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        <Border BorderBrush="Black"  
+                HorizontalAlignment="Left" 
+                Height="139"
+                Margin="185,337,0,0" 
+                VerticalAlignment="Top" 
+                Width="301"
+                Style="{StaticResource BorderStyle}">
+            <Grid>
+
+                <TextBox     PlaceholderText="Nazwa Broni"
+                         Style="{StaticResource TextBoxStyle1}" 
+                               Width="200"  
+                              Margin="0,0,0,0"
+                            />
+                <TextBox     PlaceholderText="Nazwa Broni"
+                         Style="{StaticResource TextBoxStyle1}" 
+                               Width="200" 
+                            Margin="0,50,0,0"
+                            />
+                <TextBox     PlaceholderText="Nazwa Broni"
+                         Style="{StaticResource TextBoxStyle1}" 
+                               Width="200" 
+                             Margin="0,100,0,0"
+                            />
+                <TextBox     Text="0"
+                         Style="{StaticResource TextBoxNumeric}" 
+                              
+                              Margin="0,0,0,0"
+                            />
+                <TextBox  Text="0"
+                         Style="{StaticResource TextBoxNumeric}" 
+                              
+                            Margin="0,50,0,0"
+                            />
+                <TextBox    Text="0"
+                         Style="{StaticResource TextBoxNumeric}" 
+                              
+                             Margin="0,100,0,0"
+                            />
+               
+            </Grid>
+           
+         
+        </Border>
+        <Border BorderBrush="Black"  
+                HorizontalAlignment="Left" 
+                Height="139"
+                Margin="491,337,0,0" 
+                VerticalAlignment="Top" 
+                Width="301"
+                Style="{StaticResource BorderStyle}">
+            <Grid>
+
+                <TextBox     PlaceholderText="Nazwa Wyposażenia"
+                         Style="{StaticResource TextBoxStyle1}" 
+                               Width="200"  
+                              Margin="0,0,0,0"
+                            />
+                <TextBox     PlaceholderText="Nazwa WYposażenia"
+                         Style="{StaticResource TextBoxStyle1}" 
+                               Width="200" 
+                            Margin="0,50,0,0"
+                            />
+                <TextBox     PlaceholderText="Nazwa Wyposażenia"
+                         Style="{StaticResource TextBoxStyle1}" 
+                               Width="200" 
+                             Margin="0,100,0,0"
+                            />
+                <TextBox    Text="0"
+                         Style="{StaticResource TextBoxNumeric}" 
+                              
+                              Margin="0,0,0,0"
+                            />
+                <TextBox     Text="0"
+                         Style="{StaticResource TextBoxNumeric}" 
+                              
+                            Margin="0,50,0,0"
+                            />
+                <TextBox     Text="0"
+                         Style="{StaticResource TextBoxNumeric}" 
+                              
+                             Margin="0,100,0,0"
+                            />
+
+            </Grid>
+
+
+        </Border>
+        <Border BorderBrush="Black" 
+                BorderThickness="1" 
+                HorizontalAlignment="Left" 
+                Height="320" 
+                Margin="877,12,0,0" 
+                VerticalAlignment="Top" 
+                Width="249"
+                Style="{StaticResource BorderStyle}">
+            <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+                <TextBox   PlaceholderText="Nazwa Atutu"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              
+                           TextWrapping="Wrap"
+                           />
+
+                <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                         />
+                <TextBox   PlaceholderText="Nazwa Atutu"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              
+                           Margin="5,32,0,0"/>
+
+                <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,32,20,0" />
+
+                <TextBox   PlaceholderText="Nazwa Atutu"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              
+                           Margin="5,62,0,0"/>
+
+                <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,62,20,0"  />
+                <TextBox   PlaceholderText="Nazwa Atutu"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              
+                           Margin="5,92,0,0"/>
+
+                <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,92,20,0" />
+                <TextBox   PlaceholderText="Nazwa Atutu"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              
+                           Margin="5,122,0,0"/>
+
+                <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,122,20,0" />
+                <TextBox   PlaceholderText="Nazwa Atutu"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              
+                           Margin="5,152,0,0"/>
+
+                <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,152,20,0" />
+
+                <TextBox   PlaceholderText="Nazwa Atutu"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              
+                           Margin="5,182,0,0"/>
+
+                <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,182,20,0"/>
+         
+
+                <TextBox   
+                    Text="0"
+                     Style="{StaticResource TextBoxNumeric}"
+                        Margin="0,92,20,0" />
+                <TextBox   PlaceholderText="Nazwa Wady"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              
+                           Margin="50,222,0,0"/>
+                <TextBox   PlaceholderText="Nazwa Wady"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              
+                           Margin="50,252,0,0"/>
+                <TextBox   PlaceholderText="Nazwa Wady"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              
+                           Margin="50,282,0,0"/>
+
+            </Grid>
+        </Border>
+        <Border
+            BorderBrush="Black" 
+                BorderThickness="1" 
+                HorizontalAlignment="Left" 
+                Height="320" 
+                Margin="842,349,0,0" 
+                VerticalAlignment="Top" 
+                Width="249"
+                Style="{StaticResource BorderStyle}">
+            <Grid>
+                <TextBox   PlaceholderText="Rozmiar"
+                         Style="{StaticResource TextBoxStyle1}" 
+                             Margin="0,0,0,0" 
+                           />
+                <TextBox   PlaceholderText="Szybkosc"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              Margin="0,35,0,0" 
+                           />
+                <TextBox   PlaceholderText="Inicjatywa"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              Margin="0,70,0,0" 
+                           />
+                <TextBox   PlaceholderText="Obrona"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              Margin="0,105,0,0" 
+                           />
+                <TextBox   PlaceholderText="Pancerz"
+                         Style="{StaticResource TextBoxStyle1}" 
+                              Margin="0,140,0,0" 
+                           />
+                <TextBox   PlaceholderText="Zdrowie"
+                         Style="{StaticResource NumeryczneWpisywanie}" 
+                              Margin="0,175,0,0" 
+                           />
+                <TextBox   PlaceholderText="Sila Woli"
+                         Style="{StaticResource NumeryczneWpisywanie}" 
+                              Margin="0,210,0,0" 
+                           />
+                <TextBox   PlaceholderText="Moralność"
+                         Style="{StaticResource NumeryczneWpisywanie}" 
+                              Margin="0,245,0,0" 
+                           />
+                <TextBox   PlaceholderText="Doświadczenie"
+                         Style="{StaticResource NumeryczneWpisywanie}" 
+                              Margin="0,280,0,0" 
+                           />
+            </Grid>
+        </Border>
+        <Button Content="Waliduj" 
+                HorizontalAlignment="Left" 
+                Margin="243,619,0,0" 
+                VerticalAlignment="Top"
+                Click="Waliduj_Click"/>
+        <Button Content="Dodaj"
+                Click="Dodaj_Click"
+                HorizontalAlignment="Left" 
+                Margin="243,543,0,0" 
+                VerticalAlignment="Top"/>
     </Grid>
 </Page>

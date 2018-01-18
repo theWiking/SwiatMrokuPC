@@ -5,11 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 using SQLitePCL;
+using System.Diagnostics;
+using Windows.UI.Popups;
 
 namespace SwiatMrokuPC
 {
     class MySQLiteHelper
     {
+        static public async void Show(string mytext)
+        {
+            var dialog = new MessageDialog(mytext, "Testmessage");
+            await dialog.ShowAsync();
+        }
         private static String[] columns = {"id", "imie", "wiek","gracz","koncept","cnota","skaza","kronika","frakcja","nazwaGrupy",
             "inteligencja","czujnosc","determinacja","sila","zrecznosc","wytrzymalosc","prezentacja","manipulacja","opanowanie",
             "dedukcja","informatyka","medycyna","nauka","okultyzm","polityka","rzemioslo","wyksztalcenie",
@@ -53,7 +60,24 @@ namespace SwiatMrokuPC
         }
         public void addNewKP(KartaPostaci KP)
         {
-            makeDB();
+            SQLitePCL.SQLiteConnection dbConnect = new SQLiteConnection("Karty.db");
+            MySQLiteHelper mySQLiteHelper = new MySQLiteHelper();
+            ISQLiteStatement iSQLiteStatement = dbConnect.Prepare(mySQLiteHelper.getCreat_KP_TALE());
+            iSQLiteStatement.Step();
+
+            String insertString = "INSERT INTO " + TABLE_KARTY_POSTACI + " (";
+            for(int i = 1; i < columns.Length; i++)
+            {
+                insertString += columns[i] +( i+1!=columns.Length?",":") VALUES (");
+            }
+            List<object> lista=KP.zwrocListe(); 
+            for(int i = 1; i < lista.Count; i++)
+            {
+                insertString +="'"+ String.Concat(lista[i])+"'" + (i+1!=lista.Count?",":");");
+            }
+            Show(insertString);
+
+            dbConnect.Prepare(insertString).Step();
             //TODO dodanie kart i parsowanie
 
         }
@@ -67,6 +91,13 @@ namespace SwiatMrokuPC
             List<KartaPostaci> lista = new List<KartaPostaci>();
 
             return lista;
+        }
+        public int getHowManyInBase()
+        {
+            SQLitePCL.SQLiteConnection dbConnect = new SQLiteConnection("Karty.db");
+            dbConnect.Prepare("SELECT COUNT(*) FROM table_KP");
+
+            return 1;
         }
     }
 }
