@@ -7,6 +7,11 @@ using Windows.Storage;
 using SQLitePCL;
 using System.Diagnostics;
 using Windows.UI.Popups;
+using Windows.Foundation;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
+using Windows.Storage.Streams;
 
 namespace SwiatMrokuPC
 {
@@ -56,7 +61,7 @@ namespace SwiatMrokuPC
             MySQLiteHelper mySQLiteHelper = new MySQLiteHelper();
             ISQLiteStatement iSQLiteStatement = dbConnect.Prepare(mySQLiteHelper.getCreat_KP_TALE());
             iSQLiteStatement.Step();
-            //Show("DbCreat");
+            
         }
         public void addNewKP(KartaPostaci KP)
         {
@@ -75,29 +80,167 @@ namespace SwiatMrokuPC
             {
                 insertString +="'"+ String.Concat(lista[i])+"'" + (i+1!=lista.Count?",":");");
             }
-            Show(insertString);
+            //Show(insertString);
 
             dbConnect.Prepare(insertString).Step();
-            //TODO dodanie kart i parsowanie
+          
 
         }
         public void deleteKP(int id)
         {
-            //TODO usuwanie karty po ID
-            
+            //TO-DO usuwanie karty po ID
+            SQLitePCL.SQLiteConnection dbConnect = new SQLiteConnection("Karty.db");
+            String usunKP = "";
+            ISQLiteStatement iSQLiteStatement = dbConnect.Prepare(usunKP);
+            iSQLiteStatement.Step();
         }
         public List<KartaPostaci> getAllKP()
         {
             List<KartaPostaci> lista = new List<KartaPostaci>();
-
+            SQLiteConnection dbConnect = new SQLiteConnection("Karty.db");
+            String sqlQuery = "SELECT id FROM " + TABLE_KARTY_POSTACI;
+            ISQLiteStatement cursor = dbConnect.Prepare(sqlQuery);
+            List<int> countID = new List<int>();
+            int i=0;
+            while (cursor.Step() == SQLiteResult.ROW)
+            {
+                countID.Add(Int32.Parse(cursor[columns[0]].ToString()));
+                i++;
+            }
+            foreach(var kp in countID) {
+                lista.Add(GetKarta(kp));
+            }
+            Show(i.ToString());
             return lista;
         }
-        public int getHowManyInBase()
+        public KartaPostaci GetKarta(int id)
+        {
+            KartaPostaci KP = new KartaPostaci();
+            
+            String sqlQuery = @"SELECT * FROM " + TABLE_KARTY_POSTACI + " WHERE id=" + id;
+
+            SQLiteConnection dbConnect = new SQLiteConnection("Karty.db");
+
+            ISQLiteStatement cursor = dbConnect.Prepare(sqlQuery);
+            while (cursor.Step() == SQLiteResult.ROW)
+            {
+                string test =". "+ (cursor[columns[0]] ).ToString();
+               
+                KP.setId(Int32.Parse(cursor[columns[0]].ToString()));
+                // Log.i("testy","Ilosc "+cursor.getCount());
+                // Log.i("testy", cursor.getString(1)+"");
+               // Show(getHowManyInBase().ToString());
+
+                KP.setImie(cursor[columns[1]] as string);
+                KP.setWiek(cursor[columns[2]] as string);
+                KP.setGracz(cursor[columns[3]] as string);
+                KP.setKoncept(cursor[columns[4]]as string);
+                KP.setCnota(cursor[columns[5]] as string);
+                KP.setSkaza(cursor[columns[6]] as string);
+                KP.setKronika(cursor[columns[7]] as string);
+                KP.setFrakcja(cursor[columns[8]] as string);
+                KP.setNazwaGrupy(cursor[columns[9]] as string);
+
+                KP.setInteligencja(Int32.Parse(cursor[columns[10]].ToString()));
+                KP.setCzujnosc(Int32.Parse(cursor[columns[11]].ToString()));
+                KP.setDeterminacja(Int32.Parse(cursor[columns[12]].ToString()));
+                KP.setSila(Int32.Parse(cursor[columns[13]].ToString()));
+                KP.setZrecznosc(Int32.Parse(cursor[columns[14]].ToString()));
+                KP.setWytrzymalosc(Int32.Parse(cursor[columns[15]].ToString()));
+                KP.setPreswazja(Int32.Parse(cursor[columns[16]].ToString()));
+                KP.setManipulacja(Int32.Parse(cursor[columns[17]].ToString()));
+                KP.setOpanowanie(Int32.Parse(cursor[columns[18]].ToString()));
+
+                KP.setDedukcja(Int32.Parse(cursor[columns[19]].ToString()));
+                KP.setInformatyka(Int32.Parse(cursor[columns[20]].ToString()));
+                KP.setMedycyna(Int32.Parse(cursor[columns[22]].ToString()));
+                KP.setNauka(Int32.Parse(cursor[columns[22]].ToString()));
+                KP.setOkultyzm(Int32.Parse(cursor[columns[23]].ToString()));
+                KP.setPolityka(Int32.Parse(cursor[columns[24]].ToString()));
+                KP.setRzemioslo(Int32.Parse(cursor[columns[25]].ToString()));
+                KP.setWyksztalcenie(Int32.Parse(cursor[columns[26]].ToString()));
+
+                KP.setBijatyka(Int32.Parse(cursor[columns[27]].ToString()));
+                KP.setBronBiala(Int32.Parse(cursor[columns[28]].ToString()));
+                KP.setBronPalna(Int32.Parse(cursor[columns[29]].ToString()));
+                KP.setProwadzenie(Int32.Parse(cursor[columns[30]].ToString()));
+                KP.setPrzetrwanie(Int32.Parse(cursor[columns[31]].ToString()));
+                KP.setSkradanie(Int32.Parse(cursor[columns[32]].ToString()));
+                KP.setWysportowanie(Int32.Parse(cursor[columns[33]].ToString()));
+                KP.setZlodziejstwo(Int32.Parse(cursor[columns[34]].ToString()));
+
+                KP.setEkspresja(Int32.Parse(cursor[columns[35]].ToString()));
+                KP.setEmpatia(Int32.Parse(cursor[columns[36]].ToString()));
+                KP.setObycie(Int32.Parse(cursor[columns[37]].ToString()));
+                KP.setOszustwo(Int32.Parse(cursor[columns[38]].ToString()));
+                KP.setPreswazja(Int32.Parse(cursor[columns[39]].ToString()));
+                KP.setPolswiate(Int32.Parse(cursor[columns[40]].ToString()));
+                KP.setZatraszanie(Int32.Parse(cursor[columns[41]].ToString()));
+                KP.setZwierzeta(Int32.Parse(cursor[columns[42]].ToString()));
+
+
+
+                KP.setAt1Wartosc(Int32.Parse(cursor[columns[52]].ToString()));
+                KP.setAt2Wartosc(Int32.Parse(cursor[columns[53]].ToString()));
+                KP.setAt3Wartosc(Int32.Parse(cursor[columns[54]].ToString()));
+                KP.setAt4Wartosc(Int32.Parse(cursor[columns[55]].ToString()));
+                KP.setAt5Wartosc(Int32.Parse(cursor[columns[56]].ToString()));
+                KP.setAt6Wartosc(Int32.Parse(cursor[columns[57]].ToString()));
+                KP.setAt7Wartosc(Int32.Parse(cursor[columns[58]].ToString()));
+                KP.setAt8Wartosc(Int32.Parse(cursor[columns[59]].ToString()));
+                KP.setAt9Wartosc(Int32.Parse(cursor[columns[60]].ToString()));
+
+
+                KP.setWada1Nazwa(cursor[columns[61]] as string);
+                KP.setWada2Nazwa(cursor[columns[62]] as string);
+                KP.setWada3Nazwa(cursor[columns[63]] as string);
+                KP.setWada4Nazwa(cursor[columns[64]] as string);
+                KP.setWada1Wartosc(Int32.Parse(cursor[columns[65]].ToString()));
+                KP.setWada2Wartosc(Int32.Parse(cursor[columns[66]].ToString()));
+                KP.setWada3Wartosc(Int32.Parse(cursor[columns[67]].ToString()));
+                KP.setWada4Wartosc(Int32.Parse(cursor[columns[68]].ToString()));
+
+                KP.setRozmiar(cursor[columns[69]] as string);
+                KP.setSzybkosc(cursor[columns[70]] as string);
+                KP.setInicjatywa(cursor[columns[71]] as string);
+                KP.setObrona(cursor[columns[72]] as string);
+                KP.setPancerz(cursor[columns[73]] as string);
+                KP.setZdrowieMax(Int32.Parse(cursor[columns[74]].ToString()));
+                KP.setSilaWoliMax(Int32.Parse(cursor[columns[75]].ToString()));
+                KP.setZdrowie(Int32.Parse(cursor[columns[76]].ToString()));
+                KP.setSilaWoli(Int32.Parse(cursor[columns[77]].ToString()));
+                KP.setDoswiadczenie(Int32.Parse(cursor[columns[78]].ToString()));
+                KP.setMoralnosc(Int32.Parse(cursor[columns[79]].ToString()));
+                KP.setBron1Nazwa(cursor[columns[80]] as string);
+                KP.setBron2Nazwa(cursor[columns[81]] as string);
+                KP.setBron3Nazwa(cursor[columns[82]] as string);
+                KP.setBron1Mod(Int32.Parse(cursor[columns[83]].ToString()));
+                KP.setBron2Mod(Int32.Parse(cursor[columns[84]].ToString()));
+                KP.setBron3Mod(Int32.Parse(cursor[columns[85]].ToString()));
+                KP.setWyp1Nazwa(cursor[columns[86]] as string);
+                KP.setWyp2Nazwa(cursor[columns[87]] as string);
+                KP.setWyp3Nazwa(cursor[columns[88]] as string);
+                KP.setWyp1Mod(Int32.Parse(cursor[columns[89]].ToString()));
+                KP.setWyp2Mod(Int32.Parse(cursor[columns[90]].ToString()));
+
+
+                KP.setWyp3Mod(Int32.Parse(cursor[columns[91]].ToString()));
+              
+              
+            }
+            
+            return KP;
+        }
+       /* public int getHowManyInBase()
         {
             SQLitePCL.SQLiteConnection dbConnect = new SQLiteConnection("Karty.db");
-            dbConnect.Prepare("SELECT COUNT(*) FROM table_KP");
-
-            return 1;
-        }
+            ISQLiteStatement cursor= dbConnect.Prepare("SELECT COUNT(id) FROM ("+TABLE_KARTY_POSTACI+");");
+            int wynik=0;
+            while (cursor.Step() == SQLiteResult.ROW)
+            {
+                 wynik = Int32.Parse(cursor[0] as string);
+            }
+            return wynik;
+        }*/
     }
 }

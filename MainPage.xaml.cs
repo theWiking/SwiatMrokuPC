@@ -38,9 +38,9 @@ namespace SwiatMrokuPC
         }
         public MainPage()
         {
-            ApplicationView.PreferredLaunchViewSize = new Size(480, 640);
-            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
-            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(200, 100));
+           // ApplicationView.PreferredLaunchViewSize = new Size(480, 640);
+          //  ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(1200, 1200));
             
             mSQH.makeDB();
             
@@ -72,12 +72,13 @@ namespace SwiatMrokuPC
 
         private async void WczytajKarte_Click(object sender, RoutedEventArgs e)
         {
+            mSQH.GetKarta(3);
           
         }
 
         private void Eksportuj_Click(object sender, RoutedEventArgs e)
         {
-
+            mSQH.getAllKP();
         }
 
         private void Importuj_Click(object sender, RoutedEventArgs e)

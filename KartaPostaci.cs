@@ -11,7 +11,7 @@ namespace SwiatMrokuPC
     {
         //zmienne
         private int id;
-        private String imie;
+        private String imie="q";
         private String wiek;
         private String gracz;
         private String koncept;

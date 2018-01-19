@@ -872,13 +872,13 @@
         </Border>
         <Button Content="Waliduj" 
                 HorizontalAlignment="Left" 
-                Margin="243,619,0,0" 
+                Margin="274,512,0,0" 
                 VerticalAlignment="Top"
                 Click="Waliduj_Click"/>
         <Button Content="Dodaj"
                 Click="Dodaj_Click"
                 HorizontalAlignment="Left" 
-                Margin="243,543,0,0" 
+                Margin="274,608,0,0" 
                 VerticalAlignment="Top"/>
     </Grid>
 </Page>
