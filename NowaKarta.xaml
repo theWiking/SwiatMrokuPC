@@ -108,8 +108,8 @@
                                 Value="3"/>
                     </Style>
                 </ResourceDictionary>
-               
-              
+
+
             </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>
     </Page.Resources>
@@ -125,31 +125,31 @@
                 Style="{StaticResource BorderStyle}">
             <GridView HorizontalAlignment="Right" Width="164" Margin="0,7,-3,10" >
 
-                <TextBox     PlaceholderText="Imie"
+                <TextBox x:Name="imie"     PlaceholderText="Imie"
                      Style="{StaticResource TextBoxStyle1}"
                         />
-                <TextBox     PlaceholderText="Wiek"
+                <TextBox x:Name="wiek"     PlaceholderText="Wiek"
                      Style="{StaticResource TextBoxStyle1}"
                         />
-                <TextBox     PlaceholderText="Gracz"
+                <TextBox x:Name="gracz"     PlaceholderText="Gracz"
                      Style="{StaticResource TextBoxStyle1}"
                          />
-                <TextBox     PlaceholderText="Koncept"
+                <TextBox x:Name="koncept"     PlaceholderText="Koncept"
                      Style="{StaticResource TextBoxStyle1}"
                        />
-                <TextBox     PlaceholderText="Cnota"
+                <TextBox x:Name="cnota"     PlaceholderText="Cnota"
                      Style="{StaticResource TextBoxStyle1}"
                         />
-                <TextBox     PlaceholderText="Skaza"
+                <TextBox x:Name="skaza"     PlaceholderText="Skaza"
                      Style="{StaticResource TextBoxStyle1}"
                         />
-                <TextBox     PlaceholderText="Kronika"
+                <TextBox x:Name="kronika"     PlaceholderText="Kronika"
                      Style="{StaticResource TextBoxStyle1}"
                         />
-                <TextBox     PlaceholderText="Frakcja"
+                <TextBox x:Name="frakcja"     PlaceholderText="Frakcja"
                      Style="{StaticResource TextBoxStyle1}"
                       />
-                <TextBox     PlaceholderText="Nazwa Grupy"
+                <TextBox x:Name="nazwaGrupy"     PlaceholderText="Nazwa Grupy"
                      Style="{StaticResource TextBoxStyle1}"
                         />
             </GridView>
@@ -163,399 +163,236 @@
                 VerticalAlignment="Top" 
                 Width="687">
             <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                <TextBlock TextWrapping="Wrap" Text="Inteligencja"
                            Margin="0,5"/>
-                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                <TextBlock TextWrapping="Wrap" Text="Czujność"
                         Margin="0,35,0,0"/>
-                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                <TextBlock TextWrapping="Wrap" Text="Determinacja"
                         Margin="0,65,0,0" />
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="100,0,0,0" 
-                          VerticalAlignment="Top" Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="120,0,0,0" 
-                          VerticalAlignment="Top"
-                         Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="140,0,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="160,0,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="180,0,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="100,30,0,0" 
-                          VerticalAlignment="Top" Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="120,30,0,0" 
-                          VerticalAlignment="Top"
-                         Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="140,30,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="160,30,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="180,30,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="100,60,0,0" 
-                          VerticalAlignment="Top" Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="120,60,0,0" 
-                          VerticalAlignment="Top"
-                         Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="140,60,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="160,60,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="180,60,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
+                <TextBox x:Name="inteligencja"   
+                    Text="1"
+                     Style="{StaticResource TextBoxNumeric}"
+                        HorizontalAlignment="Left" 
+                    Margin="150,0,0,0"/>
+                <TextBox x:Name="czujnosc"   
+                    Text="1"
+                     Style="{StaticResource TextBoxNumeric}"
+                        HorizontalAlignment="Left" 
+                    Margin="150,30,0,0"/>
+                <TextBox x:Name="determinacja"   
+                    Text="1"
+                     Style="{StaticResource TextBoxNumeric}"
+                        HorizontalAlignment="Left" 
+                    Margin="150,60,0,0"/>
 
-                <TextBlock TextWrapping="Wrap" Text="Textlock"
+                <TextBlock TextWrapping="Wrap" Text="Siła"
                            Margin="230,5,0,0"/>
-                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                <TextBlock TextWrapping="Wrap" Text="Zręczność"
                         Margin="230,35,0,0"/>
-                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                <TextBlock TextWrapping="Wrap" Text="Wytrzymałośc"
                         Margin="230,65,0,0" />
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="330,0,0,0" 
-                          VerticalAlignment="Top" Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="350,0,0,0" 
-                          VerticalAlignment="Top"
-                         Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="370,0,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="390,0,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="410,0,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="330,30,0,0" 
-                          VerticalAlignment="Top" Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="350,30,0,0" 
-                          VerticalAlignment="Top"
-                         Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="370,30,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="390,30,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="410,30,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="330,60,0,0" 
-                          VerticalAlignment="Top" Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="350,60,0,0" 
-                          VerticalAlignment="Top"
-                         Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="370,60,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="390,60,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="410,60,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-
-                <TextBlock TextWrapping="Wrap" Text="Textlock"
+                <TextBox x:Name="sila"   
+                    Text="1"
+                     Style="{StaticResource TextBoxNumeric}"
+                        HorizontalAlignment="Left" 
+                    Margin="380,0,0,0"/>
+                <TextBox x:Name="zrecznosc"   
+                    Text="1"
+                     Style="{StaticResource TextBoxNumeric}"
+                        HorizontalAlignment="Left" 
+                    Margin="380,30,0,0"/>
+                <TextBox x:Name="wytrzymalosc"   
+                    Text="1"
+                     Style="{StaticResource TextBoxNumeric}"
+                        HorizontalAlignment="Left" 
+                    Margin="380,60,0,0"/>
+                <TextBlock TextWrapping="Wrap" Text="Prezencja"
                            Margin="460,5,0,0"/>
-                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                <TextBlock TextWrapping="Wrap" Text="Manipulacja"
                         Margin="460,35,0,0"/>
-                <TextBlock TextWrapping="Wrap" Text="TextBlock"
+                <TextBlock TextWrapping="Wrap" Text="Opanowanie"
                         Margin="460,65,0,0" />
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="560,0,0,0" 
-                          VerticalAlignment="Top" Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="580,0,0,0" 
-                          VerticalAlignment="Top"
-                         Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="600,0,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="620,0,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="640,0,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="560,30,0,0" 
-                          VerticalAlignment="Top" Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="580,30,0,0" 
-                          VerticalAlignment="Top"
-                         Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="600,30,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="620,30,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="640,30,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="560,60,0,0" 
-                          VerticalAlignment="Top" Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="580,60,0,0" 
-                          VerticalAlignment="Top"
-                         Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="600,60,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="620,60,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
-                <CheckBox 
-                          HorizontalAlignment="Left" 
-                          Margin="640,60,0,0" 
-                          VerticalAlignment="Top"
-                            Width="20"/>
+                <TextBox x:Name="prezencja"   
+                    Text="1"
+                     Style="{StaticResource TextBoxNumeric}"
+                        HorizontalAlignment="Left" 
+                    Margin="600,0,0,0"/>
+                <TextBox x:Name="manipulacja"   
+                    Text="1"
+                     Style="{StaticResource TextBoxNumeric}"
+                        HorizontalAlignment="Left" 
+                    Margin="600,30,0,0"/>
+                <TextBox x:Name="opanowanie"   
+                    Text="1"
+                     Style="{StaticResource TextBoxNumeric}"
+                        HorizontalAlignment="Left" 
+                    Margin="600,60,0,0"/>
             </Grid>
         </Border>
 
 
 
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="217" Margin="185,115,0,0" VerticalAlignment="Top" Width="675">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="252" Margin="185,115,0,0" VerticalAlignment="Top" Width="675">
             <Grid>
                 <Border BorderBrush="Black" 
                 BorderThickness="1" 
                 HorizontalAlignment="Left" 
-                Height="215" 
+                Height="250" 
                 Margin="0,0,0,0"
                 VerticalAlignment="Top" 
                 Width="223"
                 Style="{StaticResource BorderStyle}">
                     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Dedukcja"
                            TextWrapping="Wrap"
                            Margin="5,5,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="dedukcja"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                          />
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Informatyka"
                            TextWrapping="Wrap"
                            Margin="5,35,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="informatyka"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,32,20,0" />
 
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Medycyna"
                            TextWrapping="Wrap"
                            Margin="5,65,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="medycyna"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,62,20,0"  />
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="okultyzm"
                            TextWrapping="Wrap"
                            Margin="5,95,0,0"/>
 
-                        <TextBox   
+                        <TextBox   x:Name="okultyzm"
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,92,20,0" />
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Polityka"
                            TextWrapping="Wrap"
                            Margin="5,125,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="polityka"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,122,20,0" />
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Rzemiosło"
                            TextWrapping="Wrap"
                            Margin="5,155,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="rzemioslo"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,152,20,0" />
 
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Wykształcenie"
                            TextWrapping="Wrap"
                            Margin="5,185,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="wyksztalcenie"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,182,20,0"/>
-                       
 
-                        <TextBox   
+
+                   
+
+                        <TextBlock Text="Nauka"
+                           TextWrapping="Wrap"
+                           Margin="5,215,0,0"/>
+
+                        <TextBox x:Name="nauka"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
-                        Margin="0,92,20,0" />
-
-
+                        Margin="0,212,20,0"/>
                     </Grid>
                 </Border>
                 <Border BorderBrush="Black" 
                 BorderThickness="1" 
                 HorizontalAlignment="Left" 
-                Height="215" 
+                Height="250" 
                 Margin="225,0,0,0" 
                 VerticalAlignment="Top" 
                 Width="223"
                 Style="{StaticResource BorderStyle}">
                     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Bijatyka"
                            TextWrapping="Wrap"
                            Margin="5,5,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="bijatyka"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                          />
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Bron Biała"
                            TextWrapping="Wrap"
                            Margin="5,35,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="bronBiala"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,32,20,0" />
 
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Broń Palna"
                            TextWrapping="Wrap"
                            Margin="5,65,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="bronpalna"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,62,20,0"  />
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Prowadzenie"
                            TextWrapping="Wrap"
                            Margin="5,95,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="prowadzenie"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,92,20,0" />
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Przetrwanie"
                            TextWrapping="Wrap"
                            Margin="5,125,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="przetrwanie"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,122,20,0" />
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Skradanie się"
                            TextWrapping="Wrap"
                            Margin="5,155,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="skradanie"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,152,20,0" />
 
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="wysportowanie"
                            TextWrapping="Wrap"
                            Margin="5,185,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="wysprotowanie"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,182,20,0"/>
-                       
 
-                        <TextBox   
+
+              
+                        <TextBlock Text="Złodzieństwo"
+                           TextWrapping="Wrap"
+                           Margin="5,215,0,0"/>
+
+                        <TextBox x:Name="zlodziejstwo"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
-                        Margin="0,92,20,0" />
+                        Margin="0,212,20,0"/>
 
 
                     </Grid>
@@ -563,76 +400,80 @@
                 <Border BorderBrush="Black" 
                 BorderThickness="1" 
                 HorizontalAlignment="Left" 
-                Height="215" 
+                Height="250" 
                 Margin="450,0,0,0" 
                 VerticalAlignment="Top" 
                 Width="223"
                 Style="{StaticResource BorderStyle}">
                     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Ekspresja "
                            TextWrapping="Wrap"
                            Margin="5,5,0,0"/>
 
-                        <TextBox   
+                        <TextBox x:Name="ekspresja"  
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                          />
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Empatia"
                            TextWrapping="Wrap"
                            Margin="5,35,0,0"/>
 
-                        <TextBox   
+                        <TextBox   x:Name="empatia"
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,32,20,0" />
 
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Obycie"
                            TextWrapping="Wrap"
                            Margin="5,65,0,0"/>
 
-                        <TextBox   
+                        <TextBox   x:Name="obycie"
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,62,20,0"  />
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Oszustwo"
                            TextWrapping="Wrap"
                            Margin="5,95,0,0"/>
 
-                        <TextBox   
+                        <TextBox   x:Name="oszustwo"
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,92,20,0" />
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Perswazja"
                            TextWrapping="Wrap"
                            Margin="5,125,0,0"/>
 
-                        <TextBox   
+                        <TextBox   x:Name="perswazja"
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,122,20,0" />
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Półświatek"
                            TextWrapping="Wrap"
                            Margin="5,155,0,0"/>
 
-                        <TextBox   
+                        <TextBox   x:Name="polswiatek"
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,152,20,0" />
 
-                        <TextBlock Text="Textlock"
+                        <TextBlock Text="Zastraszanie"
                            TextWrapping="Wrap"
                            Margin="5,185,0,0"/>
 
-                        <TextBox   
+                        <TextBox   x:Name="zastraszanie"
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,182,20,0"/>
-                       
-                        <TextBox   
+
+                     
+                        <TextBlock Text="Zwierzęta"
+                           TextWrapping="Wrap"
+                           Margin="5,215,0,0"/>
+
+                        <TextBox   x:Name="zwierzeta"
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
-                        Margin="0,92,20,0" />
-
+                        Margin="0,212,20,0"/>
 
                     </Grid>
                 </Border>
@@ -641,82 +482,82 @@
         <Border BorderBrush="Black"  
                 HorizontalAlignment="Left" 
                 Height="139"
-                Margin="185,337,0,0" 
+                Margin="185,367,0,0" 
                 VerticalAlignment="Top" 
                 Width="301"
                 Style="{StaticResource BorderStyle}">
             <Grid>
 
-                <TextBox     PlaceholderText="Nazwa Broni"
+                <TextBox x:Name="nazwaBroni1"     PlaceholderText="Nazwa Broni"
                          Style="{StaticResource TextBoxStyle1}" 
                                Width="200"  
                               Margin="0,0,0,0"
                             />
-                <TextBox     PlaceholderText="Nazwa Broni"
+                <TextBox x:Name="nazwaBroni2"     PlaceholderText="Nazwa Broni"
                          Style="{StaticResource TextBoxStyle1}" 
                                Width="200" 
                             Margin="0,50,0,0"
                             />
-                <TextBox     PlaceholderText="Nazwa Broni"
+                <TextBox x:Name="nazwaBroni3"     PlaceholderText="Nazwa Broni"
                          Style="{StaticResource TextBoxStyle1}" 
                                Width="200" 
                              Margin="0,100,0,0"
                             />
-                <TextBox     Text="0"
+                <TextBox x:Name="bron1"     Text="0"
                          Style="{StaticResource TextBoxNumeric}" 
                               
                               Margin="0,0,0,0"
                             />
-                <TextBox  Text="0"
+                <TextBox x:Name="bron2"  Text="0"
                          Style="{StaticResource TextBoxNumeric}" 
                               
                             Margin="0,50,0,0"
                             />
-                <TextBox    Text="0"
+                <TextBox x:Name="bron3"    Text="0"
                          Style="{StaticResource TextBoxNumeric}" 
                               
                              Margin="0,100,0,0"
                             />
-               
+
             </Grid>
-           
-         
+
+
         </Border>
         <Border BorderBrush="Black"  
                 HorizontalAlignment="Left" 
                 Height="139"
-                Margin="491,337,0,0" 
+                Margin="559,368,0,0" 
                 VerticalAlignment="Top" 
                 Width="301"
                 Style="{StaticResource BorderStyle}">
             <Grid>
 
-                <TextBox     PlaceholderText="Nazwa Wyposażenia"
+                <TextBox x:Name="nazwaWyp1"     PlaceholderText="Nazwa Wyposażenia"
                          Style="{StaticResource TextBoxStyle1}" 
                                Width="200"  
                               Margin="0,0,0,0"
                             />
-                <TextBox     PlaceholderText="Nazwa WYposażenia"
+                <TextBox x:Name="nazwaWyp2"     PlaceholderText="Nazwa WYposażenia"
                          Style="{StaticResource TextBoxStyle1}" 
                                Width="200" 
                             Margin="0,50,0,0"
                             />
-                <TextBox     PlaceholderText="Nazwa Wyposażenia"
+                <TextBox x:Name="nazwaWyp3"     PlaceholderText="Nazwa Wyposażenia"
                          Style="{StaticResource TextBoxStyle1}" 
                                Width="200" 
                              Margin="0,100,0,0"
                             />
-                <TextBox    Text="0"
+                <TextBox x:Name="wyp1"    Text="0"
                          Style="{StaticResource TextBoxNumeric}" 
                               
                               Margin="0,0,0,0"
                             />
-                <TextBox     Text="0"
+                <TextBox x:Name="wyp2"     Text="0"
                          Style="{StaticResource TextBoxNumeric}" 
                               
                             Margin="0,50,0,0"
                             />
-                <TextBox     Text="0"
+                <TextBox x:Name="wyp3"     Text="0"
                          Style="{StaticResource TextBoxNumeric}" 
                               
                              Margin="0,100,0,0"
@@ -735,87 +576,83 @@
                 Width="249"
                 Style="{StaticResource BorderStyle}">
             <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
-                <TextBox   PlaceholderText="Nazwa Atutu"
+                <TextBox x:Name="nazwaAtutu1"   PlaceholderText="Nazwa Atutu"
                          Style="{StaticResource TextBoxStyle1}" 
                               
                            TextWrapping="Wrap"
                            />
 
-                <TextBox   
+                <TextBox x:Name="at1"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                          />
-                <TextBox   PlaceholderText="Nazwa Atutu"
+                <TextBox x:Name="nazwaAtutu2"   PlaceholderText="Nazwa Atutu"
                          Style="{StaticResource TextBoxStyle1}" 
                               
                            Margin="5,32,0,0"/>
 
-                <TextBox   
+                <TextBox x:Name="at2"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,32,20,0" />
 
-                <TextBox   PlaceholderText="Nazwa Atutu"
+                <TextBox x:Name="nazwaAtutu3"   PlaceholderText="Nazwa Atutu"
                          Style="{StaticResource TextBoxStyle1}" 
                               
                            Margin="5,62,0,0"/>
 
-                <TextBox   
+                <TextBox x:Name="at3"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,62,20,0"  />
-                <TextBox   PlaceholderText="Nazwa Atutu"
+                <TextBox x:Name="nazwaAtutu4"   PlaceholderText="Nazwa Atutu"
                          Style="{StaticResource TextBoxStyle1}" 
                               
                            Margin="5,92,0,0"/>
 
-                <TextBox   
+                <TextBox x:Name="at4"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,92,20,0" />
-                <TextBox   PlaceholderText="Nazwa Atutu"
+                <TextBox x:Name="nazwaAtutu5"   PlaceholderText="Nazwa Atutu"
                          Style="{StaticResource TextBoxStyle1}" 
                               
                            Margin="5,122,0,0"/>
 
-                <TextBox   
+                <TextBox x:Name="at5"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,122,20,0" />
-                <TextBox   PlaceholderText="Nazwa Atutu"
+                <TextBox x:Name="nazwaAtutu6"   PlaceholderText="Nazwa Atutu"
                          Style="{StaticResource TextBoxStyle1}" 
                               
                            Margin="5,152,0,0"/>
 
-                <TextBox   
+                <TextBox x:Name="at6"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,152,20,0" />
 
-                <TextBox   PlaceholderText="Nazwa Atutu"
+                <TextBox x:Name="nazwaAtutu7"   PlaceholderText="Nazwa Atutu"
                          Style="{StaticResource TextBoxStyle1}" 
                               
                            Margin="5,182,0,0"/>
 
-                <TextBox   
+                <TextBox x:Name="at7"   
                     Text="0"
                      Style="{StaticResource TextBoxNumeric}"
                         Margin="0,182,20,0"/>
-         
 
-                <TextBox   
-                    Text="0"
-                     Style="{StaticResource TextBoxNumeric}"
-                        Margin="0,92,20,0" />
-                <TextBox   PlaceholderText="Nazwa Wady"
+
+                <TextBox x:Name="wada1"   PlaceholderText="Nazwa Wady"
                          Style="{StaticResource TextBoxStyle1}" 
                               
                            Margin="50,222,0,0"/>
-                <TextBox   PlaceholderText="Nazwa Wady"
+                <TextBox x:Name="wada2"   PlaceholderText="Nazwa Wady"
                          Style="{StaticResource TextBoxStyle1}" 
                               
                            Margin="50,252,0,0"/>
-                <TextBox   PlaceholderText="Nazwa Wady"
+                <TextBox x:Name="wada3"   PlaceholderText="Nazwa Wady"
                          Style="{StaticResource TextBoxStyle1}" 
                               
                            Margin="50,282,0,0"/>
@@ -827,44 +664,48 @@
                 BorderThickness="1" 
                 HorizontalAlignment="Left" 
                 Height="320" 
-                Margin="842,349,0,0" 
+                Margin="877,349,0,0" 
                 VerticalAlignment="Top" 
-                Width="249"
-                Style="{StaticResource BorderStyle}">
+                Width="153"
+                Style="{StaticResource BorderStyle}" RenderTransformOrigin="0.542,0.494">
             <Grid>
-                <TextBox   PlaceholderText="Rozmiar"
+                <TextBox x:Name="rozmiar"   PlaceholderText="Rozmiar"
                          Style="{StaticResource TextBoxStyle1}" 
                              Margin="0,0,0,0" 
                            />
-                <TextBox   PlaceholderText="Szybkosc"
+                <TextBox x:Name="szybkosc"   PlaceholderText="Szybkosc"
                          Style="{StaticResource TextBoxStyle1}" 
                               Margin="0,35,0,0" 
                            />
-                <TextBox   PlaceholderText="Inicjatywa"
+                <TextBox x:Name="inicjatywa"   PlaceholderText="Inicjatywa"
                          Style="{StaticResource TextBoxStyle1}" 
                               Margin="0,70,0,0" 
                            />
-                <TextBox   PlaceholderText="Obrona"
+                <TextBox x:Name="obrona"   PlaceholderText="Obrona"
                          Style="{StaticResource TextBoxStyle1}" 
                               Margin="0,105,0,0" 
                            />
-                <TextBox   PlaceholderText="Pancerz"
+                <TextBox x:Name="pancerz"   PlaceholderText="Pancerz"
                          Style="{StaticResource TextBoxStyle1}" 
                               Margin="0,140,0,0" 
                            />
-                <TextBox   PlaceholderText="Zdrowie"
+                <TextBox x:Name="zdrowie"   PlaceholderText="Zdrowie"
+                         Text=""
                          Style="{StaticResource NumeryczneWpisywanie}" 
                               Margin="0,175,0,0" 
                            />
-                <TextBox   PlaceholderText="Sila Woli"
+                <TextBox x:Name="silaWoli"   PlaceholderText="Sila Woli"
+                         Text=""
                          Style="{StaticResource NumeryczneWpisywanie}" 
                               Margin="0,210,0,0" 
                            />
-                <TextBox   PlaceholderText="Moralność"
+                <TextBox x:Name="moralnosc"   PlaceholderText="Moralność"
+                          Text=""
                          Style="{StaticResource NumeryczneWpisywanie}" 
                               Margin="0,245,0,0" 
                            />
-                <TextBox   PlaceholderText="Doświadczenie"
+                <TextBox x:Name="doswiadczenie"   PlaceholderText="Doświadczenie"
+                          Text=""
                          Style="{StaticResource NumeryczneWpisywanie}" 
                               Margin="0,280,0,0" 
                            />
@@ -875,10 +716,12 @@
                 Margin="274,512,0,0" 
                 VerticalAlignment="Top"
                 Click="Waliduj_Click"/>
-        <Button Content="Dodaj"
+        <Button x:Name="dodajButton" Content="Dodaj"
                 Click="Dodaj_Click"
+                
                 HorizontalAlignment="Left" 
                 Margin="274,608,0,0" 
-                VerticalAlignment="Top"/>
+                VerticalAlignment="Top" IsEnabled="False"
+                />
     </Grid>
 </Page>

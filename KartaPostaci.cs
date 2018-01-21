@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 
 namespace SwiatMrokuPC
 {
@@ -113,7 +114,13 @@ namespace SwiatMrokuPC
         private int wyp1Mod;
         private int wyp2Mod;
         private int wyp3Mod;
+        static private async void Show(string mytext)
+        {
+            var dialog = new MessageDialog(mytext, "Testmessage");
+            await dialog.ShowAsync();
+        }
         //Settery i getery
+
         public int getId()
         {
             return id;
@@ -1037,7 +1044,94 @@ namespace SwiatMrokuPC
         {
             return " imie: " + imie;
         }
+        public bool czyAtrybutyDobrzeWypelnione()
+        {
+            if (
+                //5 4 3
+                (((inteligencja + czujnosc + determinacja - 3 == 5) &&
+                (sila + zrecznosc + wytrzymalosc - 3 == 4) &&
+                (prezentacja + manipulacja + opanowanie - 3 == 3)) ||
+                //5 3 4
+                ((inteligencja + czujnosc + determinacja - 3 == 5) &&
+                (sila + zrecznosc + wytrzymalosc - 3 == 3) &&
+                (prezentacja + manipulacja + opanowanie - 3 == 4)) ||
+                //3 5 4
+                ((inteligencja + czujnosc + determinacja - 3 == 3) &&
+                (sila + zrecznosc + wytrzymalosc - 3 == 5) &&
+                (prezentacja + manipulacja + opanowanie - 3 == 4)) ||
+                //3 4 5
+                ((inteligencja + czujnosc + determinacja - 3 == 3) &&
+                (sila + zrecznosc + wytrzymalosc - 3 == 4) &&
+                (prezentacja + manipulacja + opanowanie - 3 == 5)) ||
+                //4 5 3
+                ((inteligencja + czujnosc + determinacja - 3 == 4) &&
+                (sila + zrecznosc + wytrzymalosc - 3 == 5) &&
+                (prezentacja + manipulacja + opanowanie - 3 == 3)) ||
+                //4 3 5
+                ((inteligencja + czujnosc + determinacja - 3 == 4) &&
+                (sila + zrecznosc + wytrzymalosc - 3 == 3) &&
+                (prezentacja + manipulacja + opanowanie - 3 == 5)))
+              
+               &&
 
+               (inteligencja != 0 || czujnosc != 0 || determinacja != 0 || 
+               sila != 0 || zrecznosc != 0 || wytrzymalosc != 0 || 
+               prezentacja != 0 || manipulacja != 0 || opanowanie != 0)
+                )
+            {
+               
+                return true;
+            }
+            else
+            {
+                   Show("żle wyełnione atrybuty " +( getInteligencja()+ getCzujnosc()+ getDeterminacja()-3).ToString()+" "+( getZrecznosc()+ getSila()+ getWytrzymalosc()-3).ToString()+" "+( getPrezentacja()+ getManipulacja()+ getOpanowanie()-3).ToString());
+              /*  Show("Zle wypełnione umiejętności "
+                       + (getDedukcja() + getInformatyka() +  getMedycyna() +  getNauka() +  getOkultyzm() +  getPolityka() +  getRzemioslo() +  getWyksztalcenie()).ToString()
+                       + " " + ( getBijatyka() +  getBronBiala() +  getBronPalna() +  getProwadzenie() +  getPrzetrwanie() +  getSkradanie() +  getWysportowanie() +  getZlodziejstwo()).ToString()
+                       + " " + ( getEkspresja() +  getEmpatia() +  getObycie() +  getOszustwo() +  getPreswazja() +  getPolswiate() +  getZatraszanie() +  getZwierzeta()).ToString());
+                */return false;
+            }
+        }
+        public bool czyUmiejetnosci()
+        {
+            if (
+                //11 7 4
+                ((dedukcja + informatyka + medycyna + nauka + okultyzm + polityka + rzemioslo + wyksztalcenie == 11) &&
+                (bijatyka + bronBiala + bronPalna + prowadzenie + przetrwanie + skradanie + wysportowanie + zlodziejstwo == 7) &&
+                (ekspresja + empatia + obycie + oszustwo + preswazja + polswiate + zatraszanie + zwierzeta == 4)) ||
+                //11 4 7
+                ((dedukcja + informatyka + medycyna + nauka + okultyzm + polityka + rzemioslo + wyksztalcenie == 11) &&
+                (bijatyka + bronBiala + bronPalna + prowadzenie + przetrwanie + skradanie + wysportowanie + zlodziejstwo == 4) &&
+                (ekspresja + empatia + obycie + oszustwo + preswazja + polswiate + zatraszanie + zwierzeta == 7)) ||
+                //7 4 11
+                ((dedukcja + informatyka + medycyna + nauka + okultyzm + polityka + rzemioslo + wyksztalcenie == 7) &&
+                (bijatyka + bronBiala + bronPalna + prowadzenie + przetrwanie + skradanie + wysportowanie + zlodziejstwo == 4) &&
+                (ekspresja + empatia + obycie + oszustwo + preswazja + polswiate + zatraszanie + zwierzeta == 11)) ||
+                //7 11 4
+                ((dedukcja + informatyka + medycyna + nauka + okultyzm + polityka + rzemioslo + wyksztalcenie == 7) &&
+                (bijatyka + bronBiala + bronPalna + prowadzenie + przetrwanie + skradanie + wysportowanie + zlodziejstwo == 11) &&
+                (ekspresja + empatia + obycie + oszustwo + preswazja + polswiate + zatraszanie + zwierzeta == 4)) ||
+                //4 11 7
+                ((dedukcja + informatyka + medycyna + nauka + okultyzm + polityka + rzemioslo + wyksztalcenie == 4) &&
+                (bijatyka + bronBiala + bronPalna + prowadzenie + przetrwanie + skradanie + wysportowanie + zlodziejstwo == 11) &&
+                (ekspresja + empatia + obycie + oszustwo + preswazja + polswiate + zatraszanie + zwierzeta == 7)) ||
+                  //4 7 11
+                  ((dedukcja + informatyka + medycyna + nauka + okultyzm + polityka + rzemioslo + wyksztalcenie == 4) &&
+                (bijatyka + bronBiala + bronPalna + prowadzenie + przetrwanie + skradanie + wysportowanie + zlodziejstwo == 7) &&
+                (ekspresja + empatia + obycie + oszustwo + preswazja + polswiate + zatraszanie + zwierzeta == 11))
+                )
+            {
+                return true;
+            }
+            else
+            {
+                Show("Zle wypełnione umiejętności "
+                       + (getDedukcja() + getInformatyka() + getMedycyna() + getNauka() + getOkultyzm() + getPolityka() + getRzemioslo() + getWyksztalcenie()).ToString()
+                       + " " + (getBijatyka() + getBronBiala() + getBronPalna() + getProwadzenie() + getPrzetrwanie() + getSkradanie() + getWysportowanie() + getZlodziejstwo()).ToString()
+                       + " " + (getEkspresja() + getEmpatia() + getObycie() + getOszustwo() + getPreswazja() + getPolswiate() + getZatraszanie() + getZwierzeta()).ToString());
+                return false;
+            }
+        }
         public List<object> zwrocListe()
         {
             List<object> lista = new List<object>();

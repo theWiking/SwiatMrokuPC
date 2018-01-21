@@ -72,8 +72,20 @@ namespace SwiatMrokuPC
 
         private async void WczytajKarte_Click(object sender, RoutedEventArgs e)
         {
-            mSQH.GetKarta(3);
-          
+            CoreApplicationView newView = CoreApplication.CreateNewView();
+            int newViewId = 0;
+            await newView.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                Frame frame = new Frame();
+                frame.Navigate(typeof(WszystajKarte), null);
+                Window.Current.Content = frame;
+                // You have to activate the window in order to show it later.
+                Window.Current.Activate();
+
+                newViewId = ApplicationView.GetForCurrentView().Id;
+            });
+            bool viewShown = await ApplicationViewSwitcher.TryShowAsStandaloneAsync(newViewId);
+
         }
 
         private void Eksportuj_Click(object sender, RoutedEventArgs e)

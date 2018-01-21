@@ -90,7 +90,7 @@ namespace SwiatMrokuPC
         {
             //TO-DO usuwanie karty po ID
             SQLitePCL.SQLiteConnection dbConnect = new SQLiteConnection("Karty.db");
-            String usunKP = "";
+             String usunKP = "DELETE FROM [table_KP] WHERE id = "+id.ToString()+";";
             ISQLiteStatement iSQLiteStatement = dbConnect.Prepare(usunKP);
             iSQLiteStatement.Step();
         }
@@ -110,7 +110,7 @@ namespace SwiatMrokuPC
             foreach(var kp in countID) {
                 lista.Add(GetKarta(kp));
             }
-            Show(i.ToString());
+          
             return lista;
         }
         public KartaPostaci GetKarta(int id)
