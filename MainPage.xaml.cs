@@ -136,21 +136,21 @@ namespace SwiatMrokuPC
                     {
                         reader.ReadToFollowing(kolumny[i]);
                         lista.Add(reader.ReadElementContentAsString());
-                        Debug.WriteLine(i+":"+kolumny[i]+"\t"+ lista.Last().ToString());
+                       // Debug.WriteLine(i+":"+kolumny[i]+"\t"+ lista.Last().ToString());
                     }
                     //reader.ReadToFollowing("imie");
                     //kp.setImie(reader.ReadElementContentAsString());
                     kp.setByList(lista);
                     mSQH.addNewKP(kp);
                 }
-                Show(document.ToString());
+                //Show(document.ToString());
             }
         }
 
         private async void Importuj_Click(object sender, RoutedEventArgs e)
         {
            String a= await getFileNameAsync();
-            Show(a);
+           // Show(a);
         }
 
         private async void About_Click(object sender, RoutedEventArgs e)

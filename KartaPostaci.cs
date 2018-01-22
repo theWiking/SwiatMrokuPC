@@ -1284,7 +1284,7 @@ namespace SwiatMrokuPC
             setPreswazja(Int32.Parse(list[39].ToString()));
             setPolswiate(Int32.Parse(list[40].ToString()));
             setZatraszanie(Int32.Parse(list[41].ToString()));
-            Show("41:"+list[8].ToString());
+           
             setZwierzeta(Int32.Parse(list[42].ToString()));
            
             setAt1Nazwa(list[43].ToString());

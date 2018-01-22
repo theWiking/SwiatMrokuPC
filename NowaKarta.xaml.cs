@@ -170,6 +170,7 @@ namespace SwiatMrokuPC
             mSQL.makeDB();
             mSQL.addNewKP(KPMain);
             Show("dodano");
+           
             Window.Current.Close();
         }
     }
