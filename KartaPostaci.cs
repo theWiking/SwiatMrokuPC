@@ -1093,6 +1093,7 @@ namespace SwiatMrokuPC
             }
         }
         public bool czyUmiejetnosci()
+
         {
             if (
                 //11 7 4
@@ -1231,6 +1232,115 @@ namespace SwiatMrokuPC
 
 
             return lista;
+        }
+
+        public void setByList(List<object> list)
+        {
+
+            setImie(list[1].ToString());
+
+            setWiek(list[2].ToString());
+            setGracz(list[3].ToString());
+            setKoncept(list[4].ToString());
+            setCnota(list[5].ToString());
+            setSkaza(list[6].ToString());
+            setKronika(list[7].ToString());
+            setFrakcja(list[8].ToString());
+            setNazwaGrupy(list[9].ToString());
+
+
+            setInteligencja(Int32.Parse(list[10].ToString()));
+            setCzujnosc(Int32.Parse(list[11].ToString()));
+            setDeterminacja(Int32.Parse(list[12].ToString()));
+            setSila(Int32.Parse(list[13].ToString()));
+            setZrecznosc(Int32.Parse(list[14].ToString()));
+            setWytrzymalosc(Int32.Parse(list[15].ToString()));
+            setPreswazja(Int32.Parse(list[16].ToString()));
+            setManipulacja(Int32.Parse(list[17].ToString()));
+            setOpanowanie(Int32.Parse(list[18].ToString()));
+
+            setDedukcja(Int32.Parse(list[19].ToString()));
+            setInformatyka(Int32.Parse(list[20].ToString()));
+            setMedycyna(Int32.Parse(list[21].ToString()));
+            setNauka(Int32.Parse(list[22].ToString()));
+            setOkultyzm(Int32.Parse(list[23].ToString()));
+            setPolityka(Int32.Parse(list[24].ToString()));
+            setRzemioslo(Int32.Parse(list[25].ToString()));
+            setWyksztalcenie(Int32.Parse(list[26].ToString()));
+
+            setBijatyka(Int32.Parse(list[27].ToString()));
+            setBronBiala(Int32.Parse(list[28].ToString()));
+            setBronPalna(Int32.Parse(list[29].ToString()));
+            setProwadzenie(Int32.Parse(list[30].ToString()));
+            setPrzetrwanie(Int32.Parse(list[31].ToString()));
+            setSkradanie(Int32.Parse(list[32].ToString()));
+            setWysportowanie(Int32.Parse(list[33].ToString()));
+            setZlodziejstwo(Int32.Parse(list[34].ToString()));
+
+            setEkspresja(Int32.Parse(list[35].ToString()));
+            setEmpatia(Int32.Parse(list[36].ToString()));
+            setObycie(Int32.Parse(list[37].ToString()));
+            setOszustwo(Int32.Parse(list[38].ToString()));
+            setPreswazja(Int32.Parse(list[39].ToString()));
+            setPolswiate(Int32.Parse(list[40].ToString()));
+            setZatraszanie(Int32.Parse(list[41].ToString()));
+            Show("41:"+list[8].ToString());
+            setZwierzeta(Int32.Parse(list[42].ToString()));
+           
+            setAt1Nazwa(list[43].ToString());
+            setAt2Nazwa(list[44].ToString());
+            setAt3Nazwa(list[45].ToString());
+            setAt4Nazwa(list[46].ToString());
+            setAt5Nazwa(list[47].ToString());
+            setAt6Nazwa(list[48].ToString());
+            setAt7Nazwa(list[49].ToString());
+            setAt8Nazwa(list[50].ToString());
+            setAt9Nazwa(list[51].ToString());
+
+            setAt1Wartosc(Int32.Parse(list[52].ToString()));
+            setAt2Wartosc(Int32.Parse(list[53].ToString()));
+            setAt3Wartosc(Int32.Parse(list[54].ToString()));
+            setAt4Wartosc(Int32.Parse(list[55].ToString()));
+            setAt5Wartosc(Int32.Parse(list[56].ToString()));
+            setAt6Wartosc(Int32.Parse(list[57].ToString()));
+            setAt7Wartosc(Int32.Parse(list[58].ToString()));
+            setAt8Wartosc(Int32.Parse(list[59].ToString()));
+            setAt9Wartosc(Int32.Parse(list[60].ToString()));
+
+            setWada1Nazwa(list[61].ToString());
+            setWada2Nazwa(list[62].ToString());
+            setWada3Nazwa(list[63].ToString());
+            setWada4Nazwa(list[64].ToString());
+            setWada1Wartosc(Int32.Parse(list[65].ToString()));
+            setWada2Wartosc(Int32.Parse(list[66].ToString()));
+            setWada3Wartosc(Int32.Parse(list[67].ToString()));
+            setWada4Wartosc(Int32.Parse(list[68].ToString()));
+
+            setRozmiar(list[69].ToString());
+            setSzybkosc(list[70].ToString());
+            setInicjatywa(list[71].ToString());
+            setObrona(list[72].ToString());
+            setPancerz(list[73].ToString());
+            setZdrowieMax(Int32.Parse(list[74].ToString()));
+            setSilaWoliMax(Int32.Parse(list[75].ToString()));
+            setZdrowie(Int32.Parse(list[76].ToString()));
+            setSilaWoli(Int32.Parse(list[77].ToString()));
+            setDoswiadczenie(Int32.Parse(list[78].ToString()));
+            setMoralnosc(Int32.Parse(list[79].ToString()));
+            setBron1Nazwa(list[80].ToString());
+            setBron2Nazwa(list[81].ToString());
+            setBron3Nazwa(list[82].ToString());
+            setBron1Mod(Int32.Parse(list[83].ToString()));
+            setBron2Mod(Int32.Parse(list[84].ToString()));
+            setBron3Mod(Int32.Parse(list[85].ToString()));
+            setWyp1Nazwa(list[86].ToString());
+            setWyp2Nazwa(list[87].ToString());
+            setWyp3Nazwa(list[88].ToString());
+            setWyp1Mod(Int32.Parse(list[89].ToString()));
+            setWyp2Mod(Int32.Parse(list[90].ToString()));
+
+
+            setWyp3Mod(Int32.Parse(list[91].ToString()));
         }
     }
 }

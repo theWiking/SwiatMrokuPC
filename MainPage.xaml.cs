@@ -20,6 +20,7 @@ using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
 using System.Xml.Linq;
 using System.Xml;
+using System.Diagnostics;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 // Tute https://www.youtube.com/watch?v=L6slHTgQcV4
@@ -128,10 +129,18 @@ namespace SwiatMrokuPC
                 {
                     reader.ReadToFollowing("Karta");
                     reader.MoveToFirstAttribute();
+                    List<object> lista = new List<object>();
                     
-
-                    reader.ReadToFollowing("imie");
-                    kp.setImie(reader.ReadElementContentAsString());
+                    String[] kolumny = mSQH.getKolumny();
+                    for (int i = 0; i < (kolumny.Length); i++)
+                    {
+                        reader.ReadToFollowing(kolumny[i]);
+                        lista.Add(reader.ReadElementContentAsString());
+                        Debug.WriteLine(i+":"+kolumny[i]+"\t"+ lista.Last().ToString());
+                    }
+                    //reader.ReadToFollowing("imie");
+                    //kp.setImie(reader.ReadElementContentAsString());
+                    kp.setByList(lista);
                     mSQH.addNewKP(kp);
                 }
                 Show(document.ToString());
