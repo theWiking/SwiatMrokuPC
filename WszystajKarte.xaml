@@ -30,6 +30,10 @@
                    Margin="348,378,0,0" 
                    TextWrapping="Wrap" 
                    Text="Atuty" VerticalAlignment="Top"/>
+        <Button x:Name="eksportuj" Content="Eksportuj"
+                Click="eksportuj_Click"
+                HorizontalAlignment="Left" 
+                Margin="255,0,0,0" VerticalAlignment="Top" Width="153"/>
 
     </Grid>
 </Page>

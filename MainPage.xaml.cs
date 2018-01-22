@@ -87,15 +87,36 @@ namespace SwiatMrokuPC
             bool viewShown = await ApplicationViewSwitcher.TryShowAsStandaloneAsync(newViewId);
 
         }
-
-        private void Eksportuj_Click(object sender, RoutedEventArgs e)
+        private async System.Threading.Tasks.Task<string> getFileNameAsync()
         {
-            mSQH.getAllKP();
+            var picker = new Windows.Storage.Pickers.FileOpenPicker();
+            picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
+            picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
+            picker.FileTypeFilter.Add(".xml");
+
+
+            Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
+            if (file != null)
+            {
+                // Application now has read/write access to the picked file
+                KartaDoBazy(file);
+                return file.Path;
+            }
+            else
+            {
+                return "Operation cancelled.";
+            }
+
+        }
+        private async void KartaDoBazy(StorageFile file)
+        {
+
         }
 
-        private void Importuj_Click(object sender, RoutedEventArgs e)
+        private async void Importuj_ClickAsync(object sender, RoutedEventArgs e)
         {
-
+           String a= await getFileNameAsync();
+            Show(a);
         }
 
         private async void About_Click(object sender, RoutedEventArgs e)
@@ -103,5 +124,6 @@ namespace SwiatMrokuPC
             StorageFolder storageFolder = ApplicationData.Current.LocalCacheFolder;
             await Windows.System.Launcher.LaunchFolderAsync(storageFolder);
         }
+
     }
 }
