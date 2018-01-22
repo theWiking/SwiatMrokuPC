@@ -119,16 +119,24 @@ namespace SwiatMrokuPC
             XmlElement x;
             XmlComment dec = dom.CreateComment("This is data of " + KPMAIN.getId() + ":" + KPMAIN.getImie());
             dom.AppendChild(dec);
-
+            String[] kolumny=mSQL.getKolumny();
             x = dom.CreateElement("Karty");
             dom.AppendChild(x);
-            XmlElement x11 = dom.CreateElement("id");
+         
             XmlElement x1 = dom.CreateElement("Karta");
-            x11.InnerText = KPMAIN.getId().ToString();
-            x1.AppendChild(x11);
-            XmlElement x12 = dom.CreateElement("imie");
-            x12.InnerText = KPMAIN.getImie();
-            x1.AppendChild(x12);
+          
+           
+          
+            List<object> lista = KPMAIN.zwrocListe();
+            for(int i=0; i < kolumny.Length; i++)
+            {
+                XmlElement w = dom.CreateElement(kolumny[i]);
+                w.InnerText = lista[i].ToString();
+                x1.AppendChild(w);
+            }
+
+           
+           
 
             x.AppendChild(x1);
 

@@ -18,6 +18,8 @@ using SQLitePCL;
 using Windows.UI.Popups;
 using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
+using System.Xml.Linq;
+using System.Xml;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 // Tute https://www.youtube.com/watch?v=L6slHTgQcV4
@@ -108,12 +110,35 @@ namespace SwiatMrokuPC
             }
 
         }
+      
         private async void KartaDoBazy(StorageFile file)
         {
+            KartaPostaci kp = new KartaPostaci();
+            using (var stream = await file.OpenStreamForReadAsync())
+            {
+                string streamContents;
+                using (var sr = new StreamReader(stream))
+                {
+                    streamContents = sr.ReadToEnd();
+                }
 
+                var document = XDocument.Parse(streamContents);
+
+                using (XmlReader reader = XmlReader.Create(new StringReader(document.ToString())))
+                {
+                    reader.ReadToFollowing("Karta");
+                    reader.MoveToFirstAttribute();
+                    
+
+                    reader.ReadToFollowing("imie");
+                    kp.setImie(reader.ReadElementContentAsString());
+                    mSQH.addNewKP(kp);
+                }
+                Show(document.ToString());
+            }
         }
 
-        private async void Importuj_ClickAsync(object sender, RoutedEventArgs e)
+        private async void Importuj_Click(object sender, RoutedEventArgs e)
         {
            String a= await getFileNameAsync();
             Show(a);

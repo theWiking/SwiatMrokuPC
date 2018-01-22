@@ -33,6 +33,10 @@ namespace SwiatMrokuPC
             "rozmiar","szybkosc","inicjatywa","obrona","pancerz","zdrowieMax","silaWoliMax","zdrowie","silaWoli","doswiadczenie","moralnosc",
             "bron1Nazwa","bron2Nazwa","bron3Nazwa","bron1Mod","bron2Mod","bron3Mod",
             "wyp1Nazwa","wyp2Nazwa","wyp3Nazwa","wyp1Mod","wyp2Mod","wyp3Mod"};
+        public String[] getKolumny()
+        {
+            return columns;
+        }
         private static String TABLE_KARTY_POSTACI= "table_KP";
         // Database Version
         private static int DATABASE_VERSION = 1;
