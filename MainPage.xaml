@@ -56,6 +56,13 @@
                 Margin="0,120,0,0"
                 VerticalAlignment="Top"
                 Style="{StaticResource StylGowny}"/>
+        <Button Content="Usuń"
+                Name="Usun"
+                Click="Usun_Click"
+                HorizontalAlignment="Center"
+                Margin="0,190,0,0"
+                VerticalAlignment="Top"
+                Style="{StaticResource StylGowny}"/>
         <Button Content="Importuj"
                 Name="Importuj"
                 Click="Importuj_Click"
