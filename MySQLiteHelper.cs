@@ -153,7 +153,7 @@ namespace SwiatMrokuPC
 
                 KP.setDedukcja(Int32.Parse(cursor[columns[19]].ToString()));
                 KP.setInformatyka(Int32.Parse(cursor[columns[20]].ToString()));
-                KP.setMedycyna(Int32.Parse(cursor[columns[22]].ToString()));
+                KP.setMedycyna(Int32.Parse(cursor[columns[21]].ToString()));
                 KP.setNauka(Int32.Parse(cursor[columns[22]].ToString()));
                 KP.setOkultyzm(Int32.Parse(cursor[columns[23]].ToString()));
                 KP.setPolityka(Int32.Parse(cursor[columns[24]].ToString()));
@@ -178,7 +178,15 @@ namespace SwiatMrokuPC
                 KP.setZatraszanie(Int32.Parse(cursor[columns[41]].ToString()));
                 KP.setZwierzeta(Int32.Parse(cursor[columns[42]].ToString()));
 
-
+                KP.setAt1Nazwa(cursor[columns[43]] as string);
+                KP.setAt2Nazwa(cursor[columns[44]] as string);
+                KP.setAt3Nazwa(cursor[columns[45]] as string);
+                KP.setAt4Nazwa(cursor[columns[46]] as string);
+                KP.setAt5Nazwa(cursor[columns[47]] as string);
+                KP.setAt6Nazwa(cursor[columns[48]] as string);
+                KP.setAt7Nazwa(cursor[columns[49]] as string);
+                KP.setAt8Nazwa(cursor[columns[50]] as string);
+                KP.setAt9Nazwa(cursor[columns[51]] as string);
 
                 KP.setAt1Wartosc(Int32.Parse(cursor[columns[52]].ToString()));
                 KP.setAt2Wartosc(Int32.Parse(cursor[columns[53]].ToString()));

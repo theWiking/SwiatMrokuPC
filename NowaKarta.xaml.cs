@@ -93,12 +93,12 @@ namespace SwiatMrokuPC
             KP.setZwierzeta(Int32.Parse(zwierzeta.Text.ToString()));
 
             KP.setAt1Nazwa(nazwaAtutu1.Text);
-            KP.setAt2Nazwa(nazwaAtutu1.Text);
-            KP.setAt3Nazwa(nazwaAtutu1.Text);
-            KP.setAt4Nazwa(nazwaAtutu1.Text);
-            KP.setAt5Nazwa(nazwaAtutu1.Text);
-            KP.setAt6Nazwa(nazwaAtutu1.Text);
-            KP.setAt7Nazwa(nazwaAtutu1.Text);
+            KP.setAt2Nazwa(nazwaAtutu2.Text);
+            KP.setAt3Nazwa(nazwaAtutu3.Text);
+            KP.setAt4Nazwa(nazwaAtutu4.Text);
+            KP.setAt5Nazwa(nazwaAtutu5.Text);
+            KP.setAt6Nazwa(nazwaAtutu6.Text);
+            KP.setAt7Nazwa(nazwaAtutu7.Text);
 
             KP.setAt1Wartosc(Int32.Parse(at1.Text.ToString()));
             KP.setAt2Wartosc(Int32.Parse(at2.Text.ToString()));
@@ -128,12 +128,12 @@ namespace SwiatMrokuPC
             KP.setBron3Nazwa(nazwaBroni3.Text);
 
             KP.setBron1Mod(Int32.Parse(bron1.Text.ToString()));
-            KP.setBron1Mod(Int32.Parse(bron2.Text.ToString()));
-            KP.setBron1Mod(Int32.Parse(bron3.Text.ToString()));
+            KP.setBron2Mod(Int32.Parse(bron2.Text.ToString()));
+            KP.setBron3Mod(Int32.Parse(bron3.Text.ToString()));
 
             KP.setWyp1Nazwa(nazwaWyp1.Text);
-            KP.setWyp2Nazwa(nazwaWyp1.Text);
-            KP.setWyp3Nazwa(nazwaWyp1.Text);
+            KP.setWyp2Nazwa(nazwaWyp2.Text);
+            KP.setWyp3Nazwa(nazwaWyp3.Text);
 
             KP.setWyp1Mod(Int32.Parse(wyp1.Text.ToString()));
             KP.setWyp2Mod(Int32.Parse(wyp2.Text.ToString()));
@@ -146,6 +146,7 @@ namespace SwiatMrokuPC
                 if (KP.czyUmiejetnosci())
                 {
                     dodajButton.IsEnabled=true;
+                    KPMain = KP;
                 }
                 else
                 {
