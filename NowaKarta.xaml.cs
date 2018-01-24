@@ -33,8 +33,8 @@ namespace SwiatMrokuPC
         }
         public NowaKarta()
         {
-           // ApplicationView.PreferredLaunchViewSize = new Size(1000, 640);
-            //ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(1000, 1000));
+            ApplicationView.PreferredLaunchViewSize = new Size(1200, 1200);
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(1200, 1200));
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             this.InitializeComponent();
         }

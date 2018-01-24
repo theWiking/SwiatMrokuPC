@@ -153,7 +153,7 @@ namespace SwiatMrokuPC
 
             await dom.SaveToFileAsync(st);
           
-            await Windows.System.Launcher.LaunchFolderAsync(sf);
+            //await Windows.System.Launcher.LaunchFolderAsync(sf);
 
             String test =dom.GetXml();
             //Show(test);

@@ -41,10 +41,10 @@ namespace SwiatMrokuPC
         }
         public MainPage()
         {
-           // ApplicationView.PreferredLaunchViewSize = new Size(480, 640);
-          //  ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            ApplicationView.PreferredLaunchViewSize = new Size(1200, 1200);
             ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(1200, 1200));
-            
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+
             mSQH.makeDB();
             
             this.InitializeComponent();
